@@ -84,4 +84,31 @@ var startPoint2 = new google.maps.Circle({
     center: youarehereMarker.getPosition(),
     radius: 175,
   
+  //How to Get to Pizza
+  var fromnowtoBarracos = [
+    {lat: 41.831409891253344, lng: -87.62728479733805},
+	{lat: 41.720261, lng: -87.714318},
+	];
+	
+  var frompasttoBarracos = [
+	{lat: 42.046342, lng: -87.700755},
+	{lat: 41.720261, lng: -87.714318},
+	];
+	
+  var iittoBarracos = new google.maps.Polyline({
+	path: fromnowtoBarracos,
+	geodesic: true,
+	strokeColor:"#FF0000",
+	strokeOpacity: 1.0,
+	strokeWeight: 1.0,
+  }};
+	  
+  var ethstoBarracos = new google.maps.Polyline({
+	path: frompasttoBarracos,
+	geodesic: true,
+	strokeColor:"#0000FF",
+	strokeOpacity: 1.0,
+	strokeWeight: 1.0,
+  }};
+  
   window.initMap = initMap;
